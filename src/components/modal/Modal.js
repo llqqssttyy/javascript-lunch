@@ -1,7 +1,7 @@
 import './Modal.css';
 
-import { RESTAURANT_FORM_EVENTS } from '../RestaurantForm/RestaurantForm';
 import { RESTAURANT_DETAIL_EVENTS } from '../RestaurantDetail/RestaurantDetail';
+import { RESTAURANT_FORM_EVENTS } from '../RestaurantForm/RestaurantForm';
 
 export default class Modal extends HTMLElement {
   #backdrop;
