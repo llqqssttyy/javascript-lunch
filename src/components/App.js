@@ -7,10 +7,6 @@ import { RESTAURANT_FILTERS_EVENTS } from './RestaurantFilters/RestaurantFilters
 import { BOOKMARK_TAB_EVENTS } from './BookmarkTab/BookmarkTab';
 import { RESTAURANT_ITEM_EVENTS } from './RestaurantItem/RestaurantItem';
 import { RESTAURANT_DETAIL_EVENTS } from './RestaurantDetail/RestaurantDetail';
-import { RESTAURANT_FORM_EVENTS } from './RestaurantForm/RestaurantForm';
-
-// domain
-import RestaurantManager from '../domain/RestaurantManager';
 
 import { loadFromLocalStorage, updateToLocalStorage } from '../utils/localStorage';
 
