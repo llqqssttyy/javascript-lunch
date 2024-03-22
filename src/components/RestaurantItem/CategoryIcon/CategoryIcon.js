@@ -1,12 +1,20 @@
 import './CategoryIcon.css';
 
-// icon images
 import koreanIcon from '../../../statics/imgs/category-korean.png';
 import chineseIcon from '../../../statics/imgs/category-chinese.png';
 import japaneseIcon from '../../../statics/imgs/category-japanese.png';
 import westernIcon from '../../../statics/imgs/category-western.png';
 import asianIcon from '../../../statics/imgs/category-asian.png';
 import etcIcon from '../../../statics/imgs/category-etc.png';
+
+const CATEGORY_ICONS = {
+  한식: koreanIcon,
+  중식: chineseIcon,
+  일식: japaneseIcon,
+  양식: westernIcon,
+  아시안: asianIcon,
+  기타: etcIcon,
+};
 
 export default class CategoryIcon extends HTMLImageElement {
   #category;
@@ -19,17 +27,7 @@ export default class CategoryIcon extends HTMLImageElement {
   }
 
   #render() {
-    this.src = this.#getCategoryIconUrl();
+    this.src = CATEGORY_ICONS[this.#category];
     this.alt = this.#category;
-  }
-
-  #getCategoryIconUrl() {
-    if (this.#category === '한식') return koreanIcon;
-    if (this.#category === '중식') return chineseIcon;
-    if (this.#category === '일식') return japaneseIcon;
-    if (this.#category === '양식') return westernIcon;
-    if (this.#category === '아시안') return asianIcon;
-    if (this.#category === '기타') return etcIcon;
-    return '';
   }
 }
